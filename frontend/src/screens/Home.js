@@ -70,7 +70,8 @@ const Home = () => {
     useEffect(() => {
         const fetchTags = async () => {
             const { data } = await axios.get("http://localhost:5000/hashtags")
-            setTagData(data)
+            console.log(data);
+            setTagData([data])
         }
         fetchTags()
     }, [])

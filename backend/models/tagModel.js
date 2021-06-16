@@ -1,5 +1,6 @@
 import mongoose from "mongoose"
 
+const taggSchema = mongoose.Schema({ tag: { type: String, required: true } })
 const tagSchema = mongoose.Schema(
     {
         title: {
@@ -7,7 +8,7 @@ const tagSchema = mongoose.Schema(
             required: true
         },
         tags: {
-            type: String,
+            type: [taggSchema],
             required: true
         }
     }
